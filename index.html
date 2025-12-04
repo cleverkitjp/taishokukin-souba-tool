@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>退職金相場チェッカー（退職一時金）</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <h1>退職金相場チェッカー</h1>
+    <p class="page-subtitle">
+      厚労省統計ベースで、退職“一時金”のざっくり相場感をチェックできます。
+    </p>
+  </header>
+
+  <main class="container">
+    <!-- 入力カード -->
+    <section class="card">
+      <h2 class="card-title">条件を入力</h2>
+
+      <div class="form-group">
+        <label for="tenure">勤続年数</label>
+        <div class="inline-input">
+          <input
+            type="number"
+            id="tenure"
+            min="1"
+            max="50"
+            inputmode="numeric"
+            placeholder="例）30"
+          />
+          <span class="suffix">年</span>
+        </div>
+        <p class="hint">おおよその年数で構いません（満年数ベース）。</p>
+      </div>
+
+      <div class="form-group">
+        <label>退職理由</label>
+        <div class="radio-group">
+          <label><input type="radio" name="reason" value="teinen" checked /> 定年退職</label>
+          <label><input type="radio" name="reason" value="jikotsugou" /> 自己都合退職</label>
+          <label><input type="radio" name="reason" value="kaisya" /> 会社都合・早期退職</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>企業規模</label>
+        <div class="radio-group">
+          <label><input type="radio" name="scale" value="small" checked /> 中小企業（従業員30〜999人目安）</label>
+          <label><input type="radio" name="scale" value="large" /> 大企業（従業員1,000人以上目安）</label>
+        </div>
+      </div>
+
+      <details class="details">
+        <summary>詳細設定（任意）</summary>
+
+        <div class="form-group">
+          <label for="gaku">最終学歴（おおよそ）</label>
+          <select id="gaku">
+            <option value="auto" selected>選択しない（大卒相当で計算）</option>
+            <option value="daigaku">大学・大学院卒</option>
+            <option value="kousotsu">高校卒</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="salary">退職直前の月給</label>
+          <div class="inline-input">
+            <input
+              type="number"
+              id="salary"
+              min="1"
+              max="999"
+              inputmode="decimal"
+              placeholder="例）50"
+            />
+            <span class="suffix">万円</span>
+          </div>
+          <p class="hint">相場額が「おおよそ◯ヶ月分」に換算されます。</p>
+        </div>
+      </details>
+
+      <div class="form-actions">
+        <button id="calcButton" type="button">相場をチェックする</button>
+      </div>
+
+      <p id="errorMessage" class="error-message" aria-live="polite"></p>
+    </section>
+
+    <!-- 結果カード -->
+    <section id="resultCard" class="card card-result hidden" aria-live="polite">
+      <h2 class="card-title">結果</h2>
+      <div id="resultContent"></div>
+    </section>
+
+    <!-- 注意書きカード -->
+    <section class="card card-note">
+      <h2 class="card-title">このツールについて</h2>
+      <ul class="note-list">
+        <li>厚生労働省「就労条件総合調査」などの統計をもとに、退職“一時金”の相場感を推計しています。</li>
+        <li>企業年金（確定給付・確定拠出）、中小企業退職金共済などの上乗せ分は含まれていません。</li>
+        <li>実際の退職金は、会社の退職金規程・役職・評価・業種などにより大きく変動します。</li>
+        <li>ここでの金額はあくまで「目安」であり、実際の支給額を保証するものではありません。</li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
