@@ -1,7 +1,7 @@
 let retireData = null;
 
 // JSON読み込み
-fetch("retire_data.json")
+fetch("./retire_data.json")
   .then((res) => {
     if (!res.ok) {
       throw new Error("退職金データの読み込みに失敗しました。");
