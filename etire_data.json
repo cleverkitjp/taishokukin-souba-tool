@@ -1,0 +1,47 @@
+{
+  "version": "R5-mhlw-retirement-lumpsum-sample",
+  "data": [
+    {
+      "gaku": "daigaku",
+      "years": "20-24",
+      "reason": "teinen",
+      "scale": "large",
+      "avg": 1400
+    },
+    {
+      "gaku": "daigaku",
+      "years": "20-24",
+      "reason": "teinen",
+      "scale": "small",
+      "avg": 1000
+    },
+    {
+      "gaku": "daigaku",
+      "years": "30-34",
+      "reason": "teinen",
+      "scale": "large",
+      "avg": 1900
+    },
+    {
+      "gaku": "daigaku",
+      "years": "30-34",
+      "reason": "teinen",
+      "scale": "small",
+      "avg": 1350
+    },
+    {
+      "gaku": "kousotsu",
+      "years": "30-34",
+      "reason": "teinen",
+      "scale": "large",
+      "avg": 1700
+    },
+    {
+      "gaku": "kousotsu",
+      "years": "30-34",
+      "reason": "teinen",
+      "scale": "small",
+      "avg": 1200
+    }
+  ]
+}
