@@ -1,48 +1,512 @@
-
+注記: 厚生労働省「令和5年就労条件総合調査」の**第6表「退職給付（一時金方式）の支給実態」**のデータに基づき、ご要望のJSONデータを作成しました。
+この調査では、企業規模「30〜99人」「100〜299人」「300〜999人」を合計した**「30〜999人」という階級の統計値が提供されているため、これを"small"として使用しました。また、「退職一時金制度」がある企業の「1人平均退職給付額（万円）」**を使用し、整数に丸めています。
 {
-  "version": "R5-mhlw-retirement-lumpsum-sample",
+  "version": "R5-mhlw-retirement-lumpsum",
   "data": [
     {
       "gaku": "daigaku",
-      "years": "20-24",
+      "years": "10-14",
       "reason": "teinen",
-      "scale": "large",
-      "avg": 1400
+      "scale": "small",
+      "avg": 546
+    },
+    {
+      "gaku": "daigaku",
+      "years": "15-19",
+      "reason": "teinen",
+      "scale": "small",
+      "avg": 1007
     },
     {
       "gaku": "daigaku",
       "years": "20-24",
       "reason": "teinen",
       "scale": "small",
-      "avg": 1000
+      "avg": 1494
     },
     {
       "gaku": "daigaku",
-      "years": "30-34",
+      "years": "25-29",
       "reason": "teinen",
-      "scale": "large",
-      "avg": 1900
+      "scale": "small",
+      "avg": 1819
     },
     {
       "gaku": "daigaku",
       "years": "30-34",
       "reason": "teinen",
       "scale": "small",
-      "avg": 1350
+      "avg": 2045
     },
     {
-      "gaku": "kousotsu",
+      "gaku": "daigaku",
+      "years": "35plus",
+      "reason": "teinen",
+      "scale": "small",
+      "avg": 2068
+    },
+    {
+      "gaku": "daigaku",
+      "years": "10-14",
+      "reason": "teinen",
+      "scale": "large",
+      "avg": 1189
+    },
+    {
+      "gaku": "daigaku",
+      "years": "15-19",
+      "reason": "teinen",
+      "scale": "large",
+      "avg": 1829
+    },
+    {
+      "gaku": "daigaku",
+      "years": "20-24",
+      "reason": "teinen",
+      "scale": "large",
+      "avg": 2233
+    },
+    {
+      "gaku": "daigaku",
+      "years": "25-29",
+      "reason": "teinen",
+      "scale": "large",
+      "avg": 2752
+    },
+    {
+      "gaku": "daigaku",
       "years": "30-34",
       "reason": "teinen",
       "scale": "large",
-      "avg": 1700
+      "avg": 2878
+    },
+    {
+      "gaku": "daigaku",
+      "years": "35plus",
+      "reason": "teinen",
+      "scale": "large",
+      "avg": 2887
+    },
+    {
+      "gaku": "daigaku",
+      "years": "10-14",
+      "reason": "jikotsugou",
+      "scale": "small",
+      "avg": 269
+    },
+    {
+      "gaku": "daigaku",
+      "years": "15-19",
+      "reason": "jikotsugou",
+      "scale": "small",
+      "avg": 524
+    },
+    {
+      "gaku": "daigaku",
+      "years": "20-24",
+      "reason": "jikotsugou",
+      "scale": "small",
+      "avg": 810
+    },
+    {
+      "gaku": "daigaku",
+      "years": "25-29",
+      "reason": "jikotsugou",
+      "scale": "small",
+      "avg": 1111
+    },
+    {
+      "gaku": "daigaku",
+      "years": "30-34",
+      "reason": "jikotsugou",
+      "scale": "small",
+      "avg": 1339
+    },
+    {
+      "gaku": "daigaku",
+      "years": "35plus",
+      "reason": "jikotsugou",
+      "scale": "small",
+      "avg": 1326
+    },
+    {
+      "gaku": "daigaku",
+      "years": "10-14",
+      "reason": "jikotsugou",
+      "scale": "large",
+      "avg": 506
+    },
+    {
+      "gaku": "daigaku",
+      "years": "15-19",
+      "reason": "jikotsugou",
+      "scale": "large",
+      "avg": 1007
+    },
+    {
+      "gaku": "daigaku",
+      "years": "20-24",
+      "reason": "jikotsugou",
+      "scale": "large",
+      "avg": 1495
+    },
+    {
+      "gaku": "daigaku",
+      "years": "25-29",
+      "reason": "jikotsugou",
+      "scale": "large",
+      "avg": 2045
+    },
+    {
+      "gaku": "daigaku",
+      "years": "30-34",
+      "reason": "jikotsugou",
+      "scale": "large",
+      "avg": 2529
+    },
+    {
+      "gaku": "daigaku",
+      "years": "35plus",
+      "reason": "jikotsugou",
+      "scale": "large",
+      "avg": 2985
+    },
+    {
+      "gaku": "daigaku",
+      "years": "10-14",
+      "reason": "kaisya",
+      "scale": "small",
+      "avg": 435
+    },
+    {
+      "gaku": "daigaku",
+      "years": "15-19",
+      "reason": "kaisya",
+      "scale": "small",
+      "avg": 792
+    },
+    {
+      "gaku": "daigaku",
+      "years": "20-24",
+      "reason": "kaisya",
+      "scale": "small",
+      "avg": 1284
+    },
+    {
+      "gaku": "daigaku",
+      "years": "25-29",
+      "reason": "kaisya",
+      "scale": "small",
+      "avg": 1729
+    },
+    {
+      "gaku": "daigaku",
+      "years": "30-34",
+      "reason": "kaisya",
+      "scale": "small",
+      "avg": 2187
+    },
+    {
+      "gaku": "daigaku",
+      "years": "35plus",
+      "reason": "kaisya",
+      "scale": "small",
+      "avg": 2005
+    },
+    {
+      "gaku": "daigaku",
+      "years": "10-14",
+      "reason": "kaisya",
+      "scale": "large",
+      "avg": 732
+    },
+    {
+      "gaku": "daigaku",
+      "years": "15-19",
+      "reason": "kaisya",
+      "scale": "large",
+      "avg": 1334
+    },
+    {
+      "gaku": "daigaku",
+      "years": "20-24",
+      "reason": "kaisya",
+      "scale": "large",
+      "avg": 1827
+    },
+    {
+      "gaku": "daigaku",
+      "years": "25-29",
+      "reason": "kaisya",
+      "scale": "large",
+      "avg": 2516
+    },
+    {
+      "gaku": "daigaku",
+      "years": "30-34",
+      "reason": "kaisya",
+      "scale": "large",
+      "avg": 2962
+    },
+    {
+      "gaku": "daigaku",
+      "years": "35plus",
+      "reason": "kaisya",
+      "scale": "large",
+      "avg": 3073
+    },
+    {
+      "gaku": "kousotsu",
+      "years": "10-14",
+      "reason": "teinen",
+      "scale": "small",
+      "avg": 468
+    },
+    {
+      "gaku": "kousotsu",
+      "years": "15-19",
+      "reason": "teinen",
+      "scale": "small",
+      "avg": 918
+    },
+    {
+      "gaku": "kousotsu",
+      "years": "20-24",
+      "reason": "teinen",
+      "scale": "small",
+      "avg": 1373
+    },
+    {
+      "gaku": "kousotsu",
+      "years": "25-29",
+      "reason": "teinen",
+      "scale": "small",
+      "avg": 1699
     },
     {
       "gaku": "kousotsu",
       "years": "30-34",
       "reason": "teinen",
       "scale": "small",
-      "avg": 1200
+      "avg": 1957
+    },
+    {
+      "gaku": "kousotsu",
+      "years": "35plus",
+      "reason": "teinen",
+      "scale": "small",
+      "avg": 2040
+    },
+    {
+      "gaku": "kousotsu",
+      "years": "10-14",
+      "reason": "teinen",
+      "scale": "large",
+      "avg": 810
+    },
+    {
+      "gaku": "kousotsu",
+      "years": "15-19",
+      "reason": "teinen",
+      "scale": "large",
+      "avg": 1419
+    },
+    {
+      "gaku": "kousotsu",
+      "years": "20-24",
+      "reason": "teinen",
+      "scale": "large",
+      "avg": 1969
+    },
+    {
+      "gaku": "kousotsu",
+      "years": "25-29",
+      "reason": "teinen",
+      "scale": "large",
+      "avg": 2486
+    },
+    {
+      "gaku": "kousotsu",
+      "years": "30-34",
+      "reason": "teinen",
+      "scale": "large",
+      "avg": 2728
+    },
+    {
+      "gaku": "kousotsu",
+      "years": "35plus",
+      "reason": "teinen",
+      "scale": "large",
+      "avg": 2736
+    },
+    {
+      "gaku": "kousotsu",
+      "years": "10-14",
+      "reason": "jikotsugou",
+      "scale": "small",
+      "avg": 213
+    },
+    {
+      "gaku": "kousotsu",
+      "years": "15-19",
+      "reason": "jikotsugou",
+      "scale": "small",
+      "avg": 427
+    },
+    {
+      "gaku": "kousotsu",
+      "years": "20-24",
+      "reason": "jikotsugou",
+      "scale": "small",
+      "avg": 697
+    },
+    {
+      "gaku": "kousotsu",
+      "years": "25-29",
+      "reason": "jikotsugou",
+      "scale": "small",
+      "avg": 947
+    },
+    {
+      "gaku": "kousotsu",
+      "years": "30-34",
+      "reason": "jikotsugou",
+      "scale": "small",
+      "avg": 1184
+    },
+    {
+      "gaku": "kousotsu",
+      "years": "35plus",
+      "reason": "jikotsugou",
+      "scale": "small",
+      "avg": 1289
+    },
+    {
+      "gaku": "kousotsu",
+      "years": "10-14",
+      "reason": "jikotsugou",
+      "scale": "large",
+      "avg": 393
+    },
+    {
+      "gaku": "kousotsu",
+      "years": "15-19",
+      "reason": "jikotsugou",
+      "scale": "large",
+      "avg": 810
+    },
+    {
+      "gaku": "kousotsu",
+      "years": "20-24",
+      "reason": "jikotsugou",
+      "scale": "large",
+      "avg": 1275
+    },
+    {
+      "gaku": "kousotsu",
+      "years": "25-29",
+      "reason": "jikotsugou",
+      "scale": "large",
+      "avg": 1785
+    },
+    {
+      "gaku": "kousotsu",
+      "years": "30-34",
+      "reason": "jikotsugou",
+      "scale": "large",
+      "avg": 2237
+    },
+    {
+      "gaku": "kousotsu",
+      "years": "35plus",
+      "reason": "jikotsugou",
+      "scale": "large",
+      "avg": 2561
+    },
+    {
+      "gaku": "kousotsu",
+      "years": "10-14",
+      "reason": "kaisya",
+      "scale": "small",
+      "avg": 344
+    },
+    {
+      "gaku": "kousotsu",
+      "years": "15-19",
+      "reason": "kaisya",
+      "scale": "small",
+      "avg": 684
+    },
+    {
+      "gaku": "kousotsu",
+      "years": "20-24",
+      "reason": "kaisya",
+      "scale": "small",
+      "avg": 1133
+    },
+    {
+      "gaku": "kousotsu",
+      "years": "25-29",
+      "reason": "kaisya",
+      "scale": "small",
+      "avg": 1546
+    },
+    {
+      "gaku": "kousotsu",
+      "years": "30-34",
+      "reason": "kaisya",
+      "scale": "small",
+      "avg": 1944
+    },
+    {
+      "gaku": "kousotsu",
+      "years": "35plus",
+      "reason": "kaisya",
+      "scale": "small",
+      "avg": 2044
+    },
+    {
+      "gaku": "kousotsu",
+      "years": "10-14",
+      "reason": "kaisya",
+      "scale": "large",
+      "avg": 646
+    },
+    {
+      "gaku": "kousotsu",
+      "years": "15-19",
+      "reason": "kaisya",
+      "scale": "large",
+      "avg": 1152
+    },
+    {
+      "gaku": "kousotsu",
+      "years": "20-24",
+      "reason": "kaisya",
+      "scale": "large",
+      "avg": 1642
+    },
+    {
+      "gaku": "kousotsu",
+      "years": "25-29",
+      "reason": "kaisya",
+      "scale": "large",
+      "avg": 2200
+    },
+    {
+      "gaku": "kousotsu",
+      "years": "30-34",
+      "reason": "kaisya",
+      "scale": "large",
+      "avg": 2617
+    },
+    {
+      "gaku": "kousotsu",
+      "years": "35plus",
+      "reason": "kaisya",
+      "scale": "large",
+      "avg": 2842
     }
   ]
 }
+
